@@ -3,11 +3,11 @@ import app from '../app';
 import { connect, connection } from 'mongoose';
 import { config } from 'dotenv';
 import { Usuario } from '../entidades/usuario';
-import { Restaurante, RestauranteBusca } from '../entidades/restaurante';
+import { RestauranteBusca } from '../entidades/restaurante';
 import { removeUsuario, buscaUsuarios } from '../persistencia/usuarioRepositorio';
 import { GrupoBusca, Grupo } from '../entidades/grupo';
 import * as grupoRepo from '../persistencia/grupoRepositorio';
-import { buscaRestaurante, removeRestaurante, cadastraRestaurante } from '../persistencia/restauranteRepositorio';
+import { buscaRestaurante, removeRestaurante } from '../persistencia/restauranteRepositorio';
 
 let token: string;
 

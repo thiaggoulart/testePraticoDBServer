@@ -12,8 +12,7 @@ let novoParticipante: Usuario;
 beforeAll(async () => {
     config();
     const env = process.env;
-    const url = `mongodb+srv://${env.ATLAS_USUARIO}:${env.ATLAS_SENHA}@${env.ATLAS_CLUSTER}/${env.ATLAS_BD_TEST}GrupoRepo`;
-    // const url = `mongodb://${env.MONGO_HOST}:${env.MONGO_PORT}/${env.MONGO_BD}Grupo`;
+    const url = `mongodb://${env.MONGO_HOST}:${env.MONGO_PORT}/${env.MONGO_BD}Grupo`;
     await connect(url, { useNewUrlParser: true });
 
     novoParticipante = await usuarioRepo.cadastraUsuario({
